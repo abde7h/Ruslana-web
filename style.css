@@ -1,0 +1,70 @@
+/* Reset general */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ul, ol, li, form, input, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+/* Evitar cambios inesperados de tamaño en algunos navegadores */
+button, input, select, textarea {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+/* Corrección de la legibilidad y rendimiento de font-size en navegadores */
+html {
+    font-size: 62.5%; /* Establece 1rem como 10px */
+}
+
+body {
+    font-size: 1.6rem; /* Equivalente a 16px */
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
+
+/* Evitar que las imágenes insertadas tengan bordes */
+img {
+    border-style: none;
+}
+
+/* Eliminar márgenes de lista */
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Asegurar que los elementos de bloque ocupen todo el ancho disponible */
+div, p, ul, ol, li, form, input, button {
+    box-sizing: border-box;
+}
+
+/* Añadir un pequeño margen al cuerpo del documento */
+body {
+    margin: 0.5rem;
+}
+
+/* Añadir estilo básico a los enlaces */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Variables de colores */
+:root {
+    --color-hover: rgba(102, 26, 63, 1);
+    --color-primario: rgba(226, 26, 110, 1);
+    --borde-seleccion: rgba(247, 162, 197, 1);
+    --color-texto: rgba(224, 220, 225, 1);
+}
+
+/* Estilos generales */
+body {
+    background-color: #fff; /* Cambia el color de fondo según sea necesario */
+    color: var(--color-texto);
+}
+
+/* Otros estilos específicos de la página irían aquí */
