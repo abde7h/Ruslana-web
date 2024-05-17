@@ -14,7 +14,7 @@
     />
     <meta name="robots" content="index, follow" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="layout.css" />
     <link rel="icon" href="favicon.svg" type="image/x-icon" />
 
     <!-- Etiquetas para Twitter -->
@@ -58,48 +58,89 @@
   </head>
   <body>
     <header>
-      <h1>Ruslana</h1>
-      <div class="icono"></div>
-      <div class="menu"></div>
-      <div class="audio"></div>
-      <nav>
-        <ul>
-          <li><i class="fa-brands fa-instagram"></i></li>
-          <li><i class="fa-brands fa-x-twitter"></i></li>
-          <li><i class="fa-brands fa-square-youtube"></i></li>
-          <li><i class="fa-brands fa-tiktok"></i></li>
-        </ul>
-      </nav>
+      <div class="menu-container">
+        <div class="contenedorspanvolumen">
+          <a href="#"><span>Ruslana</span></a>
+        <audio id="backgroundAudio" autoplay loop>
+          <source src="./assets/ruslana.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <button title="mute" onclick="toggleMute()"><i id="muteIcon" class="fa-solid fa-volume-high"></i></button>
+        </div>
+        <nav class="menu-redes">
+          <ul>
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-x-twitter"></i></li>
+            <li><i class="fa-brands fa-square-youtube"></i></li>
+            <li><i class="fa-brands fa-tiktok"></i></li>
+          </ul>
+
+        </nav>
+        <nav class="navhamburguer" role="navigation">
+          <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+              <li><a href="#">Home</a></li></a>
+              <li><a href="#">About</a></li></a>
+              <li><a href="#">Info</a></li></a>
+              <li><a href="#">Contact</a></li></a>
+            </ul>
+          </div>
+        </nav>
+        <a href="#main" class="scroll-arrow down-arrow">↓</a>
+      </div>
     </header>
+
     <main>
-      <div class="hero"></div>
-      <div class="video"></div>
-      <div class="arrow"></div>
+      <div class="containermain">
+        <img src="./assets/home-image.png" alt="Main Image">
+        <a href="#" class="btn btn1">
+          <img src="./assets/botones-home/BIO-HOME.svg" alt="Bio">
+        </a>
+        <a href="#" class="btn btn2">
+          <img src="./assets/botones-home/FECHAS-HOME.svg" alt="Fechas">
+        </a>
+        <a href="#" class="btn btn3">
+          <img src="./assets/botones-home/PLAYLIST-HOME.svg" alt="Playlist">
+        </a>
+        <a href="#" class="btn btn4">
+          <img src="./assets/botones-home/TIENDA-HOME.svg" alt="Tienda">
+        </a>
+      </div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Izx1Tgv2j7c?si=CV7UOWwSp1aGJS6l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="arrow"></div>
     </main>
     <footer>
-      <h2>Formulario de Suscripción</h2>
-    <h3>Por favor, completa el formulario para suscribirte:</h3>
+      <div class="contenedorfooter">
+        <form action="#" method="post">
+          <h2>Ruslana</h2>
+          <h3>Únete</h3>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required />
     
-    <form action="#" method="post">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-        
-        <label for="correo">Correo electrónico:</label>
-        <input type="email" id="correo" name="correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-        
-        <input type="checkbox" id="legal" name="legal" required>
-        <label for="legal">Acepto los términos y condiciones legales</label>
-        
-        <input type="submit" value="Suscribirse">
-    </form>
+          <label for="correo">Email</label>
+          <input type="email" id="correo" name="correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+    
+          <div class="checkbox-container">
+            <input type="checkbox" id="legal" name="legal" required />
+            Aviso Legal
+          </div>
+    
+          <input type="submit" value="Suscribirse" />
+        </form>
+        <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Izx1Tgv2j7c?si=CV7UOWwSp1aGJS6l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+      <a href="#" class="scroll-arrow up-arrow">↑</a>
     </footer>
-    <div class="videofooter">
-      <img src="" alt="">
-      <video src=""></video>
-    </div>
     <script
       src="https://kit.fontawesome.com/88322ef388.js"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>
