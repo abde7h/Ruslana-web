@@ -32,7 +32,7 @@ header span {
   color: white;
 }
 
-.menu-container button {
+.button-mute {
   background-color: var(--color-fondo);
   padding-left: 1vw;
   cursor: pointer;
@@ -235,10 +235,6 @@ main iframe {
   display: block;
 }
 
-.arrow {
-  /* Add styles for the arrow if needed */
-}
-
 /*---------------FOOTER--------------------*/
 
 /*-----Formulario-----*/
@@ -373,45 +369,11 @@ form {
   font-size: 20px;
 }
 
-.scroll-arrow {
-  position: fixed;
-  bottom: 20px;
-  display: none;
-  font-size: 24px;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 40px;
-  z-index: 1000;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.scroll-arrow:hover {
-  opacity: 0.8;
-}
-
-.up-arrow {
-  right: 20px;
-}
-
-.down-arrow {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Mostrar flecha para bajar solo en la página principal */
-.home .down-arrow {
-  display: block;
-}
-
-/* Mostrar flecha para subir solo en el footer */
 footer .up-arrow {
   display: block;
 }
 
-.arrow-btn i {
-  padding-right: 10px;
+.menu-container .arrow-btn{
+  background-color: var(--color-fondo);
+  cursor: pointer;
 }
