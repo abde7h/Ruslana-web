@@ -15,38 +15,18 @@ function toggleMute() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  const scrollArrows = document.querySelectorAll('.scroll-arrow');
-  
-  // Función para mostrar/ocultar flechas según la posición de desplazamiento
-  function toggleScrollArrows() {
-    const mainSection = document.querySelector('main');
-    const footerSection = document.querySelector('footer');
-    const scrollY = window.scrollY || window.pageYOffset;
-    
-    // Mostrar flecha para bajar solo en la página principal
-    if (mainSection.getBoundingClientRect().top > 0) {
-      scrollArrows.forEach(arrow => {
-        if (arrow.classList.contains('down-arrow')) {
-          arrow.style.display = 'block';
-        } else {
-          arrow.style.display = 'none';
-        }
-      });
-    }
-    
-    // Mostrar flecha para subir solo en el footer
-    if (footerSection.getBoundingClientRect().top > window.innerHeight) {
-      scrollArrows.forEach(arrow => {
-        if (arrow.classList.contains('up-arrow')) {
-          arrow.style.display = 'block';
-        } else {
-          arrow.style.display = 'none';
-        }
-      });
-    }
+function scrollToTop() {
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+  });
+}
+
+window.onscroll = function() {
+  // Show the arrow button when the user scrolls down
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.querySelector('.arrow-container').style.display = 'block';
+  } else {
+      document.querySelector('.arrow-container').style.display = 'none';
   }
-  
-  // Evento de desplazamiento para controlar las flechas
-  window.addEventListener('scroll', toggleScrollArrows);
-});
+};
